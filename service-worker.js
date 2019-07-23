@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/SolidRocker/travote/precache-manifest.4ac475eb7c4f9316a2baf5a3dc3bb70b.js"
+  "/SolidRocker/travote/precache-manifest.cdbb58ac9f10626b50f669696b4fe304.js"
 );
 
 self.addEventListener('message', (event) => {
