@@ -1,0 +1,135 @@
+@import '../../utils/mainStyle.scss';
+
+.info-section, .info-section-sp{
+    align-content: flex-start;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 20vw;
+}
+
+.info-section-sp {
+    width: 55vw;
+}
+
+.info-section-headerbg {
+    background-color: rgb(218, 116, 49);
+    border-radius: 3px;
+    flex: 2 0 100%;
+    margin-right: 2vw;
+}
+
+.info-section-header {
+    color:rgb(240, 240, 240);
+    flex: 2 0 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 110%;
+    font-weight: bold;
+    order: 1;
+    padding-top: 2vh;
+    padding-left: 2vw;
+}
+
+.info-section-category {
+    color:rgb(240, 240, 240);
+    flex: 2 0 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 60%;
+    order: 2;
+    padding-top: 0.5vh;
+    padding-bottom: 1.6vh;
+    padding-left: 2vw;
+}
+
+.info-section-gap {
+    flex: 2 0 100%;
+    padding-bottom: 3vh;
+}
+
+.info-section-info, .info-section-info-sm, .info-section-default-text {
+    color:#000000;
+    display: inline-block;
+    flex: 1 0 80%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 75%;
+    line-height: 2vh;
+    order: 3;
+    padding-right: 1vw;
+    padding-left: 6%;
+}
+
+.info-section-info-sm {
+    text-align: center;
+    padding: 0vw;
+}
+
+.info-section-default-text {
+    font-size: 60%;
+    padding-top: 2vh;
+    padding-left: 2vw;
+}
+
+.info-section-icon, .info-section-icon-sm {
+    color:#9b9b9b;
+    font-size: 120%;
+    order: 4;
+    padding-right: 5%;
+}
+
+.info-section-info-vote {
+    color:#9b9b9b;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 0 80%;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 2vh;
+    justify-content: center;
+    order: 3;
+    padding-right: 1vw;
+    padding-left: 6%;
+    width: 100%;
+}
+
+.info-section-icon {
+    float: left;
+}
+
+.info-section-icon-vote {
+    font-size: 250%;
+    padding: 2% 5% 5% 0;
+}
+
+.info-section-icon-vote:hover {
+    color:#000000;
+}
+
+.info-section-desc-vote {
+    color:#000000;
+    font-size: 80%;
+    font-weight: bold;
+    flex: 1 0 100%;
+}
+
+.info-section-icon-sm {
+    filter: gray;
+    -webkit-filter: grayscale(1);
+    font-size: 180%;
+    width: 10%;
+}
+
+.info-section-icon-sm:hover {
+    filter: none;
+    -webkit-filter: grayscale(0);
+}
+
+.info-section-hr {
+    color:#9b9b9b;
+    padding-right: 1.5vw;
+}
+
+a {
+    color: #808080;
+}
+a:hover {
+    color: #0000BB;
+}

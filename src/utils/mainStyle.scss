@@ -1,0 +1,57 @@
+// mainStyle stores the 'global' styles, such as base buttons, primary colors etc.
+$nw-primary-color: rgb(0, 166, 188);
+$nw-primary-color-light: rgba(112, 184, 194, 0.5);
+$nw-border-radius: 7px;
+$nw-font-standard: 16px;
+
+$nw-ffamily-title: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+$nw-ffamily-desc: 'Roboto', 'Arial';
+
+%nw-background {
+    background-color: white;
+    border-radius: $nw-border-radius;
+    display: flex;
+}
+
+// Centralized
+%nw-font-header1 {
+    font-family: $nw-ffamily-title;
+    font-size: 3rem;
+    text-align: center;
+}
+
+// Left aligned, Main point
+%nw-font-header2 {
+    color: rgb(179, 179, 179);
+    font-family: $nw-ffamily-title;
+    font-size: 2rem;
+    font-style: oblique;
+}
+
+// Sub point
+%nw-font-header3 {
+    font-family: $nw-ffamily-title;
+    font-size: 1rem;
+    font-style: oblique;
+}
+
+// Text
+%nw-font-desc {
+    font-family: $nw-ffamily-desc;
+    font-size: 1rem;
+}
+
+// Input
+%nw-input-box {
+    border-radius: $nw-border-radius * 0.5;
+}
+
+// This font-size setting is needed so that em or percentages can be relative to it.
+body {
+    font-size: $nw-font-standard;
+}
+
+%nw-back-arrow {
+    color: white;
+    padding: 0 15px;
+}

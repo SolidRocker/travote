@@ -1,0 +1,29 @@
+@import '../../utils/mainStyle.scss';
+
+.login-container {  
+    align-content: flex-start;
+    background-color: $nw-primary-color;
+    display: flex;
+    margin-top: 20vh;
+    flex-wrap: wrap;
+}
+  
+.mainHeader {
+    @extend %nw-font-header1;
+    align-items: center;
+    color: white;
+    font-size: 5em;
+    flex: 1 0 100%;
+    margin: auto;
+}
+
+.subtitle {
+    @extend %nw-font-desc;
+    align-items: center;
+    color: white;
+    font-size: 0.9em;
+    flex: 1 0 100%;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 20px;
+}

@@ -1,0 +1,45 @@
+@import '../../utils/mainStyle.scss';
+
+.countries-container {  
+    align-content: flex-start;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+  
+.header-strip {
+    align-items: center;
+    background-color: $nw-primary-color;
+    color: white;
+    display: flex;
+    flex: 1 0 100%;
+    font-family: $nw-ffamily-desc;
+    justify-content: flex-left;
+    margin: auto;
+    min-height: 2.5em;
+}
+
+.instructions {
+    align-items: center;
+    background-color: white;
+    color: black;
+    display: flex;
+    flex: 0 1 100%;
+    font-family: $nw-ffamily-desc;
+    justify-content: flex-left;
+}
+
+.countries-map {
+    align-items: center;
+    background-color: white;
+    color: white;
+    display: flex;
+    flex: 0 1 100%;
+    font-family: $nw-ffamily-desc;
+    justify-content: flex-left;
+}
+
+.back-arrow {
+    @extend %nw-back-arrow;
+}
