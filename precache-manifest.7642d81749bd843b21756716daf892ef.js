@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8b582b1209038b26ff7901c9cbc90b6d",
+    "revision": "461bf1a5db7830a8e76df61540869cb8",
     "url": "/SolidRocker/travote/index.html"
   },
   {
-    "revision": "46cf8bec36244322b84c",
+    "revision": "dfc7467e72609f101300",
     "url": "/SolidRocker/travote/static/css/main.70fa2b04.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/SolidRocker/travote/static/js/2.758181b2.chunk.js"
   },
   {
-    "revision": "46cf8bec36244322b84c",
-    "url": "/SolidRocker/travote/static/js/main.df3d00ac.chunk.js"
+    "revision": "dfc7467e72609f101300",
+    "url": "/SolidRocker/travote/static/js/main.853a2e07.chunk.js"
   },
   {
     "revision": "11d0491282da2fb147d5",
