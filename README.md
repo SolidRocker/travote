@@ -1,68 +1,78 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+View the web app here: https://solidrocker.github.io/travote/
 
-## Available Scripts
+## Project Overview
 
-In the project directory, you can run:
+There are 3 screens so far:
+1. Login page. Just click [Sign up] to go in.
+2. Choose country. Doesn't work for now, will always go to Singapore. Need data from diff countries to continue this.
+3. Choose places. I have 5 places for now. Click on them for the places' info.
 
-### `npm start`
+## To Do
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Shi Kang
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+#### Given a country, add an API to populate the list of places there.
+- Right now it is reading from a local file, we should be fetching it from server.
+- Refer to attractionsMap/attractionsMapAction.js
 
-### `npm test`
+#### Available countries should be read from the server.
+- Refer to countriesMap/countriesMapAction.js
+    
+#### Voting
+- In the info screen, users should be able to see the votes when they click on a place.
+- Right now it's just some fake numbers.
+- When user clicks on either upvote/downvote, the API should be fired.
+- Refer to attractionsInfo/attractionsInfo.js, function [registerVote].
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Login System
+- Auth for users to sign up and login
 
-### `npm run build`
+### Yan Kit
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Centralise country page
+- Right now in the 'Choose Countries' page, the map is rendered on the right.
+- Need to investigate and move it back to the center.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+#### Google Maps is scrollable
+- The map should only take up the screen space, but the scrollbar appears (and shows white space).
+- Need to remove the white space part, so that map renders on visible screen only (no scrollbar).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### Back Button from Info page to Country Page
+- Going back shows only a white screen, because it does not fire anything when it goes back to the previous screen.
+- Need to research on how to force it to reload.
 
-### `npm run eject`
+### Kam
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- The CSS is in a mess because it involved a lot of copy/paste. Will clean it up.
+- Zoom the map to a different place depending on country.
+- Add filter to info results (food, attractions, hotels, etc)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### KIV List?
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Detect if a place is open NOW or not. (Might not need since its a trip planner?)
+- Profile page for users to bookmark/save places of interest
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Code Structure
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+The source files are separated by function.
+ - Components: The building blocks of the project. Each component is a feature. It can be small (avatar image, custom button) to large (google-maps package).
+ - Pages: A page is made up of many components, such as a header, sidebar, and a map.
+ - Redux: The main redux files for redux to work.
+ - Utils: Global functions can go here (right now its only the global css).
+ - Data - The needed external file data.
+ 
+ ## Adding A Action/Reducer
+ 
+ When you trigger an action, that action can manipulate the redux variables.
+ You can then use the redux variables later on.
+ 
+ 1. Create a type in redux/types.js. This will identify the action you want to call.
+ 2. Create (Copy/paste) a function in your component's Action.js. Remember to import the type as well!
+ 3. Use dispatch to send the newly created/manipulated variables to the Reducer.
+ 4. In the component's Reducer.js, add a new case to receive the action. Remember to import the type as well!
+ 5. payload is the standard name, but you can also call it anything you want.
+ 
+ If you make a new file, you will need to:
+ 1. Make a new Action.js in your component.
+ 2. Make a new Reducer.js in your component.
+ 3. Import the reducer into redux/index.js. (You can rename it to whatever you want here (eg attractionsMapReducer), since your reducer.jx only exports one thing).
