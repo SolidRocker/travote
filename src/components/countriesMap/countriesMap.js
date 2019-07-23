@@ -45,7 +45,7 @@ export class CountriesMap extends Component {
         <Marker
             key={id}
             marker={marker}
-            onClick={this.onClickCountry}
+            onClick={() => this.onClickCountry(marker.name)}
             style={{
                 default: { fill: "#FF5722" },
                 hover: { fill: "#FFFFFF" },
@@ -90,14 +90,14 @@ export class CountriesMap extends Component {
 
         return(
             <ComposableMap
-                projectionConfig={{ scale: 350 }}
+                projectionConfig={{ scale: 200 }}
                 style={{
                     width: "100%",
                     height: "auto",
                 }}
             >
 
-            <ZoomableGroup center={[ 120, 15 ]} disablePanning>
+            <ZoomableGroup center={[ 180, 25 ]} zoom={2} disablePanning>
                 <Geographies geography="/allcountries50.json">
                 {(geographies, projection) =>
                     geographies.map((geography, i) => (

@@ -18,11 +18,15 @@ export const initCountries = () => dispatch => {
         IDs.push(AllCountries[i].abbr);
         names.push(AllCountries[i].name);
 
+        var newCoord = [];
+        newCoord.push(AllCountries[i].xaxis);
+        newCoord.push(AllCountries[i].yaxis);
+
         var newMarker = {
-            markerOffset: -8,
-            abbr: AllCountries[i].abbr,
-            name: AllCountries[i].name,
-            coordinates: [AllCountries[i].xaxis, AllCountries[i].yaxis]
+            "markerOffset": -8,
+            "abbr": AllCountries[i].abbr,
+            "name": AllCountries[i].name,
+            "coordinates": newCoord
         }
         markers.push(newMarker);
     }

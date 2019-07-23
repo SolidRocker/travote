@@ -2,7 +2,7 @@
   "name": "travote",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/SolidRocker/travote",
+  "homepage": "https://solidrocker.github.io/travote", 
   "dependencies": {
     "google-maps-react": "^2.0.2",
     "node-sass": "^4.12.0",
