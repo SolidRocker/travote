@@ -1,68 +1,38 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+View the web app here: https://solidrocker.github.io/travote/
 
-## Available Scripts
+## Project Overview
 
-In the project directory, you can run:
+There are 3 screens so far:
+1. Login page. Just click [Sign up] to go in.
+2. Choose country. Doesn't work for now, will always go to Singapore. Need data from diff countries to continue this.
+3. Choose places. I have 5 places for now. Click on them for the places' info.
 
-### `npm start`
+## To Do
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### hello
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
 
-### `npm test`
+## Code Structure
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+The source files are separated by function.
+ - Components: The building blocks of the project. Each component is a feature. It can be small (avatar image, custom button) to large (google-maps package).
+ - Pages: A page is made up of many components, such as a header, sidebar, and a map.
+ - Redux: The main redux files for redux to work.
+ - Utils: Global functions can go here (right now its only the global css).
+ - Data - The needed external file data.
+ 
+ ## Adding A Action/Reducer
+ 
+ When you trigger an action, that action can manipulate the redux variables.
+ You can then use the redux variables later on.
+ 
+ 1. Create a type in redux/types.js. This will identify the action you want to call.
+ 2. Create (Copy/paste) a function in your component's Action.js. Remember to import the type as well!
+ 3. Use dispatch to send the newly created/manipulated variables to the Reducer.
+ 4. In the component's Reducer.js, add a new case to receive the action. Remember to import the type as well!
+ 5. payload is the standard name, but you can also call it anything you want.
+ 
+ If you make a new file, you will need to:
+ 1. Make a new Action.js in your component.
+ 2. Make a new Reducer.js in your component.
+ 3. Import the reducer into redux/index.js. (You can rename it to whatever you want here (eg attractionsMapReducer), since your reducer.jx only exports one thing).
