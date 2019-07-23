@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/SolidRocker/travote/static/css/main.70fa2b04.chunk.css",
-    "main.js": "/SolidRocker/travote/static/js/main.853a2e07.chunk.js",
-    "main.js.map": "/SolidRocker/travote/static/js/main.853a2e07.chunk.js.map",
+    "main.js": "/SolidRocker/travote/static/js/main.ccaa911b.chunk.js",
+    "main.js.map": "/SolidRocker/travote/static/js/main.ccaa911b.chunk.js.map",
     "runtime~main.js": "/SolidRocker/travote/static/js/runtime~main.8b492356.js",
     "runtime~main.js.map": "/SolidRocker/travote/static/js/runtime~main.8b492356.js.map",
     "static/js/2.758181b2.chunk.js": "/SolidRocker/travote/static/js/2.758181b2.chunk.js",
     "static/js/2.758181b2.chunk.js.map": "/SolidRocker/travote/static/js/2.758181b2.chunk.js.map",
     "index.html": "/SolidRocker/travote/index.html",
-    "precache-manifest.42123d494d95f5ace82f10ee909de005.js": "/SolidRocker/travote/precache-manifest.42123d494d95f5ace82f10ee909de005.js",
+    "precache-manifest.5e5fbe44142ea98d9c990718bdad3f46.js": "/SolidRocker/travote/precache-manifest.5e5fbe44142ea98d9c990718bdad3f46.js",
     "service-worker.js": "/SolidRocker/travote/service-worker.js",
     "static/css/main.70fa2b04.chunk.css.map": "/SolidRocker/travote/static/css/main.70fa2b04.chunk.css.map"
   }
