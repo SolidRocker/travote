@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/travote/static/css/main.70fa2b04.chunk.css",
+    "main.js": "/travote/static/js/main.e30f3c47.chunk.js",
+    "main.js.map": "/travote/static/js/main.e30f3c47.chunk.js.map",
+    "runtime~main.js": "/travote/static/js/runtime~main.eeb4e136.js",
+    "runtime~main.js.map": "/travote/static/js/runtime~main.eeb4e136.js.map",
+    "static/js/2.758181b2.chunk.js": "/travote/static/js/2.758181b2.chunk.js",
+    "static/js/2.758181b2.chunk.js.map": "/travote/static/js/2.758181b2.chunk.js.map",
+    "index.html": "/travote/index.html",
+    "precache-manifest.51f44eb7375f33e196232504dcfec9f5.js": "/travote/precache-manifest.51f44eb7375f33e196232504dcfec9f5.js",
+    "service-worker.js": "/travote/service-worker.js",
+    "static/css/main.70fa2b04.chunk.css.map": "/travote/static/css/main.70fa2b04.chunk.css.map"
+  }
+}
