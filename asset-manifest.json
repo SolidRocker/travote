@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/travote/static/css/main.da4460d2.chunk.css",
-    "main.js": "/travote/static/js/main.72855581.chunk.js",
-    "main.js.map": "/travote/static/js/main.72855581.chunk.js.map",
+    "main.js": "/travote/static/js/main.9db3c708.chunk.js",
+    "main.js.map": "/travote/static/js/main.9db3c708.chunk.js.map",
     "runtime~main.js": "/travote/static/js/runtime~main.eeb4e136.js",
     "runtime~main.js.map": "/travote/static/js/runtime~main.eeb4e136.js.map",
     "static/js/2.57ef17b5.chunk.js": "/travote/static/js/2.57ef17b5.chunk.js",
     "static/js/2.57ef17b5.chunk.js.map": "/travote/static/js/2.57ef17b5.chunk.js.map",
     "index.html": "/travote/index.html",
-    "precache-manifest.ce81418bb6707ebdbf147058c0d7db29.js": "/travote/precache-manifest.ce81418bb6707ebdbf147058c0d7db29.js",
+    "precache-manifest.277a89c17bcb9b2ec3e802e1c8e8476c.js": "/travote/precache-manifest.277a89c17bcb9b2ec3e802e1c8e8476c.js",
     "service-worker.js": "/travote/service-worker.js",
     "static/css/main.da4460d2.chunk.css.map": "/travote/static/css/main.da4460d2.chunk.css.map"
   }

@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2e7e116660b8e52676fc7189c6de74fd",
+    "revision": "33e44f8bc25f9de624ae63d5bc225787",
     "url": "/travote/index.html"
   },
   {
-    "revision": "f60c630112d0089a133d",
+    "revision": "1a7ca93027398853df26",
     "url": "/travote/static/css/main.da4460d2.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/travote/static/js/2.57ef17b5.chunk.js"
   },
   {
-    "revision": "f60c630112d0089a133d",
-    "url": "/travote/static/js/main.72855581.chunk.js"
+    "revision": "1a7ca93027398853df26",
+    "url": "/travote/static/js/main.9db3c708.chunk.js"
   },
   {
     "revision": "90210c86a3ab662bbbe4",
