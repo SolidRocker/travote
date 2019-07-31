@@ -1,3 +1,5 @@
+[WORK IN PROGRESS]
+
 View the web app here: https://solidrocker.github.io/travote/
 
 ## Project Overview
@@ -46,6 +48,7 @@ There are 3 screens so far:
 - The CSS is in a mess because it involved a lot of copy/paste. Will clean it up.
 - Zoom the map to a different place depending on country.
 - Add filter to info results (food, attractions, hotels, etc)
+- Phone view
 
 ### KIV List?
 
