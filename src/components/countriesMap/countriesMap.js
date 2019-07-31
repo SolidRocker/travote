@@ -5,14 +5,48 @@ import { Redirect } from 'react-router-dom';
 import { ComposableMap, ZoomableGroup, Geographies, Geography, Markers, Marker } from 'react-simple-maps';
 import ReactTooltip from 'react-tooltip';
 import {initCountries, chooseCountries} from './countriesMapAction';
-
+import './countriesMap.scss';
+  
 export class CountriesMap extends Component {
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            cx: 0,
+            cy: 0,
+            posUpdated: false,
+        }
+    }
+
     componentDidMount() {
+
         this.props.initCountries();
+
+        if(window.location.hostname === "localhost") {
+            this.setState({mapPath: "/allcountries50.json"})
+        }
+        else {
+            // The "travote" part is supposed to be a %PUBLIC_URL% variable,
+            // but I couldn't get it working, so I hardcoded it.
+            this.setState({mapPath: "/travote/allcountries50.json"})
+        }
+
         setTimeout(() => {
           ReactTooltip.rebuild()
         }, 100)
+    }
+
+    componentDidUpdate() {
+
+        // For some reason, we need to force update the position after the
+        // first render to get it right.
+        if(!this.state.posUpdated) {
+            this.setState({
+                cx: 105,
+                cy: 20,
+                posUpdated: true
+            })
+        }
     }
 
     toCountryName(abbr) {
@@ -56,11 +90,11 @@ export class CountriesMap extends Component {
         <circle
             cx={0}
             cy={0}
-            r={4}
+            r={8}
             data-tip={marker.name}
             style={{
                 stroke: "#FF5722",
-                strokeWidth: 3,
+                strokeWidth: 6,
                 opacity: 0.9,
             }}
         />
@@ -70,7 +104,7 @@ export class CountriesMap extends Component {
             y={marker.markerOffset}
             style={{
                 fontFamily: "Roboto, sans-serif",
-                fontSize:"7px",
+                fontSize:"14px",
                 fontStyle:"bold",
                 fill: "#000080",
             }}
@@ -89,20 +123,24 @@ export class CountriesMap extends Component {
         }
 
         return(
+            <div className="cmap-container">
             <ComposableMap
-                projectionConfig={{ scale: 200 }}
+                projectionConfig={{ scale: 400 }}
+                width={window.innerWidth*0.9}
+                height={window.innerHeight*0.9}
                 style={{
                     width: "100%",
                     height: "auto",
                 }}
             >
 
-            <ZoomableGroup center={[ 180, 25 ]} zoom={2} disablePanning>
-                <Geographies geography="/allcountries50.json">
+            <ZoomableGroup center={[ this.state.cx, this.state.cy ]} zoom={2} disablePanning>
+                <Geographies geography={this.state.mapPath}>
                 {(geographies, projection) =>
                     geographies.map((geography, i) => (
                     //console.log(geography.properties.NAME_EN + ", " + geography.properties.ADM0_A3),
-                    this.props.countryIDs.indexOf(geography.properties.ADM0_A3) !== -1 && (
+                    this.props.countryIDs.indexOf(geography.properties.ADM0_A3) !== -1 &&
+                    (
                     <Geography
                         key={i}
                         data-tip={geography.properties.NAME_EN}
@@ -139,7 +177,8 @@ export class CountriesMap extends Component {
                 </Markers>
 
             </ZoomableGroup>
-            </ComposableMap>      
+            </ComposableMap> 
+            </div>     
         );
     }
 }

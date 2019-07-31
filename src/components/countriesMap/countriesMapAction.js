@@ -23,7 +23,7 @@ export const initCountries = () => dispatch => {
         newCoord.push(AllCountries[i].yaxis);
 
         var newMarker = {
-            "markerOffset": -8,
+            "markerOffset": -16,
             "abbr": AllCountries[i].abbr,
             "name": AllCountries[i].name,
             "coordinates": newCoord

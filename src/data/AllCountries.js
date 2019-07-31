@@ -9,13 +9,13 @@ export const AllCountries = [
 		"name": "Malaysia",
 		"abbr": "MYS",
 		"xaxis": 102,
-		"yaxis": 4,
+		"yaxis": 6,
 	},
 	{
 		"name": "Philippines",
 		"abbr": "PHL",
-		"xaxis": 123,
-		"yaxis": 12,
+		"xaxis": 124,
+		"yaxis": 15,
 	},
 	{
 		"name": "Indonesia",

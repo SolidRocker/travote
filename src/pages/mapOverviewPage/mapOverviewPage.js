@@ -16,10 +16,8 @@ class MapOverviewPage extends Component {
                     <Link to="/"> <FaArrowLeft className="back-arrow" />Back</Link>
                 </div>
                 <div className="instructions">Please choose your destination.</div>
-                <div className="countries-map">
-                    <CountriesMap/>
-                    <ReactTooltip/>
-                </div>
+                <CountriesMap/>
+                <ReactTooltip/>
             </div>
         )
     }

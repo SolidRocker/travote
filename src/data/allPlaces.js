@@ -2,6 +2,7 @@ export const data = [
 	{
 		"id": "1",
 		"name": "Lam's Kitchen",
+		"master" : "Food",
 		"category": "Food",
 		"desc": "super lam food", 
 		"lat": "1.316450",
@@ -18,6 +19,7 @@ export const data = [
 	{
 		"id": "2",
 		"name": "Swee Choon Tim Sum Restaurant",
+		"master" : "Food",
 		"category": "Food",
 		"desc": "super good dim sum", 
 		"lat": "1.308452",
@@ -35,6 +37,7 @@ export const data = [
 	{
 		"id": "3",
 		"name": "Tim Ho Wan",
+		"master" : "Food",
 		"category": "Food",
 		"desc": "super tim", 
 		"lat": "1.309589",
@@ -50,6 +53,7 @@ export const data = [
 	{
 		"id": "4",
 		"name": "Happy Chef Western Food",
+		"master" : "Food",
 		"category": "Food",
 		"desc": "super happy", 
 		"lat": "1.305739",
@@ -65,6 +69,7 @@ export const data = [
 	{
 		"id": "5",
 		"name": "Chye Seng Huat Hardware",
+		"master" : "Food",
 		"category": "Food",
 		"desc": "super chye", 
 		"lat": "1.311891",
