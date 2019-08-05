@@ -42,7 +42,7 @@ There are 3 screens so far:
 - Going back shows only a white screen, because it does not fire anything when it goes back to the previous screen.
 - Need to research on how to force it to reload.
 
-### Kam
+### Tai Keong
 
 - The CSS is in a mess because it involved a lot of copy/paste. Will clean it up.
 - Zoom the map to a different place depending on country.
