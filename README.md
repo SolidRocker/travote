@@ -31,9 +31,8 @@ There are 3 screens so far:
 
 ### Yan Kit
 
-#### Centralise country page
-- Right now in the 'Choose Countries' page, the map is rendered on the right.
-- Need to investigate and move it back to the center.
+#### Design screens
+ - Just the attractions screen for now
 
 #### Google Maps is scrollable
 - The map should only take up the screen space, but the scrollbar appears (and shows white space).
@@ -52,30 +51,8 @@ There are 3 screens so far:
 
 ### KIV List?
 
-- Detect if a place is open NOW or not. (Might not need since its a trip planner?)
+- Recommended Page: Users can see who has very similar places upvoted, or what the user likes based on upvote similarity
 - Profile page for users to bookmark/save places of interest
+- Detect if a place is open NOW or not. (Might not need since its a trip planner?)
 
-## Code Structure
 
-The source files are separated by function.
- - Components: The building blocks of the project. Each component is a feature. It can be small (avatar image, custom button) to large (google-maps package).
- - Pages: A page is made up of many components, such as a header, sidebar, and a map.
- - Redux: The main redux files for redux to work.
- - Utils: Global functions can go here (right now its only the global css).
- - Data - The needed external file data.
- 
- ## Adding A Action/Reducer
- 
- When you trigger an action, that action can manipulate the redux variables.
- You can then use the redux variables later on.
- 
- 1. Create a type in redux/types.js. This will identify the action you want to call.
- 2. Create (Copy/paste) a function in your component's Action.js. Remember to import the type as well!
- 3. Use dispatch to send the newly created/manipulated variables to the Reducer.
- 4. In the component's Reducer.js, add a new case to receive the action. Remember to import the type as well!
- 5. payload is the standard name, but you can also call it anything you want.
- 
- If you make a new file, you will need to:
- 1. Make a new Action.js in your component.
- 2. Make a new Reducer.js in your component.
- 3. Import the reducer into redux/index.js. (You can rename it to whatever you want here (eg attractionsMapReducer), since your reducer.jx only exports one thing).
