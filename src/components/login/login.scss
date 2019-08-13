@@ -1,6 +1,6 @@
 @import '../../utils/mainStyle.scss';
 
-.background {
+.login-background {
     @extend %nw-background;
     color: black;
     flex-direction: column;
@@ -99,12 +99,12 @@ input {
     text-align: center;
 }
 
-.middle-text-or {
+.login-middle-text-or {
     text-align: center;
     padding-bottom: 5px;
 }
 
-.button-sign-up {
+.login-button-sign-up {
     background-color: rgb(25, 190, 127);
     border-radius: 4px;
     color: #eee;
@@ -116,6 +116,6 @@ input {
     width: 40%;
 }
 
-.button-sign-up.hover {
+.login-button-sign-up.hover {
     background-color: #197071;
 }

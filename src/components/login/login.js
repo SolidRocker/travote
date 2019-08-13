@@ -6,7 +6,7 @@ class Login extends Component {
 
     render() {
         return(
-            <div className="background">
+            <div className="login-background">
                 <div className="login-item">
                     <form action="" method="post" className="form form-login">
 
@@ -25,8 +25,8 @@ class Login extends Component {
                         </div>
                     </form>
                 </div>
-                <div className="middle-text-or">or</div>
-                <Link to="/mapoverview" style={{textDecoration: 'none'}}> <div className="button-sign-up">Sign Up</div> </Link>
+                <div className="login-middle-text-or">or</div>
+                <Link to="/mapoverview" style={{textDecoration: 'none'}}> <div className="login-button-sign-up">Sign Up</div> </Link>
             </div>
         );
     }

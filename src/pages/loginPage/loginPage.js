@@ -8,8 +8,8 @@ class LoginPage extends Component {
         document.body.style = 'background: rgb(0, 166, 188);';
         return (
         <div className="login-container">
-            <div className="mainHeader">TRAVOTE</div>
-            <div className="subtitle">Community-driven travel recommendations</div>
+            <div className="login-mainHeader">TRAVOTE</div>
+            <div className="login-subtitle">Community-driven travel recommendations</div>
             <Login/>
         </div>
         );
