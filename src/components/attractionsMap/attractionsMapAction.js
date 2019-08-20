@@ -3,7 +3,8 @@ import {
     UPDATE_SELECTED_PLACE
 } from '../../redux/types';
 
-import {data} from '../../data/allPlaces';
+//import {data} from '../../data/allPlaces';
+import axios from 'axios';
 
 /*function hasData(data_) {
     return data_ !== '' && data_ !== '-';
@@ -13,21 +14,15 @@ export const fetchPlaces = (latitude, longitude, distance//,
                             //masterCategoryList, categoryList, zoneList
                             ) => dispatch => {
     
-    /* SHIKANG: Convert to fetch json data
-    let path = 'https://www.dropbox.com/home/Public/places.json';// + latitude + '/' + longitude + '/' + distance;
-    fetch(path)
-    .then(res => res.json())
-    .then(data => {
-        // Extract Filter Data
-        /*for(var i = 0; i < data.length; ++i) {
+    axios.get('https://5gfdlfwnjh.execute-api.ap-southeast-1.amazonaws.com/dev/places?limit=20')
+            .then(res => {
+                dispatch({
+                    type: FETCH_PLACES,
+                    payload: res.data
+                })
+            });
 
-        dispatch({
-            type: FETCH_PLACES,
-            payload: data
-        })
-        }
-    );*/
-
+    /*
     var newPlaces = [];
     for(var i = 0; i < data.length; ++i) {
         newPlaces.push(data[i]);
@@ -37,6 +32,7 @@ export const fetchPlaces = (latitude, longitude, distance//,
         type: FETCH_PLACES,
         payload: newPlaces
     })
+    */
 }
 
 export const updateSelectedPlace = (selectedPlace, hasSelection = true) => dispatch => {
