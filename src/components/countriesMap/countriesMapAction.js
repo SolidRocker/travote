@@ -3,40 +3,41 @@ import {
     CHOOSE_COUNTRY
  } from '../../redux/types';
 
-import {AllCountries} from '../../data/AllCountries'
+//import {AllCountries} from '../../data/AllCountries'
+import axios from 'axios';
 
 export const initCountries = () => dispatch => {
-
-    //SHIKANG: SAVE THE JS FILE DATA IN DB INSTEAD.
 
     var IDs = [];
     var names = [];
     var markers = [];
 
-    for(var i = 0; i < AllCountries.length; ++i) {
+    axios.get('https://5gfdlfwnjh.execute-api.ap-southeast-1.amazonaws.com/dev/countries?limit=20')
+         .then(res => {
+            for(var i = 0; i < res.data.length; ++i) {
+                IDs.push(res.data[i].abbr);
+                names.push(res.data[i].name);
 
-        IDs.push(AllCountries[i].abbr);
-        names.push(AllCountries[i].name);
+                var newCoord = [];
+                newCoord.push(res.data[i].xaxis);
+                newCoord.push(res.data[i].yaxis);
 
-        var newCoord = [];
-        newCoord.push(AllCountries[i].xaxis);
-        newCoord.push(AllCountries[i].yaxis);
+                var newMarker = {
+                    "markerOffset": -16,
+                    "abbr": res.data[i].abbr,
+                    "name": res.data[i].name,
+                    "coordinates": newCoord
+                }
+                markers.push(newMarker);
+            }
 
-        var newMarker = {
-            "markerOffset": -16,
-            "abbr": AllCountries[i].abbr,
-            "name": AllCountries[i].name,
-            "coordinates": newCoord
-        }
-        markers.push(newMarker);
-    }
-
-    dispatch({
-        type: INIT_COUNTRIES,
-        payload_IDs: IDs,
-        payload_names: names,
-        payload_markers: markers
-    })
+            dispatch({
+                type: INIT_COUNTRIES,
+                payload_IDs: IDs,
+                payload_names: names,
+                payload_markers: markers
+            })
+         });
 }
 
 export const chooseCountries = (country) => dispatch => {

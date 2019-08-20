@@ -15,12 +15,12 @@ export const fetchPlaces = (latitude, longitude, distance//,
                             ) => dispatch => {
     
     axios.get('https://5gfdlfwnjh.execute-api.ap-southeast-1.amazonaws.com/dev/places?limit=20')
-            .then(res => {
-                dispatch({
-                    type: FETCH_PLACES,
-                    payload: res.data
-                })
-            });
+         .then(res => {
+             dispatch({
+                 type: FETCH_PLACES,
+                 payload: res.data
+             })
+         });
 
     /*
     var newPlaces = [];
