@@ -67,6 +67,7 @@ export class AttractionsMap extends Component {
 
     render() {
         return (
+            <div className="map-section">
                 <Map
                     google={this.props.google}
                     zoom={14}
@@ -77,7 +78,9 @@ export class AttractionsMap extends Component {
                     }}
                 >
                 {this.props.places.map(place => this.renderMarkers(place))}
+
                 </Map>
+            </div>
         );
     }
 }

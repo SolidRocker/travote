@@ -17,7 +17,7 @@ class AttractionsPage extends Component {
         return(
             <div className="attractions-container">
                 <AttractionsInfo className="attractions-info" />
-                <AttractionsMap className="attractions-map" />
+                <AttractionsMap className="attractions-maps" />
             </div>
         )
     }

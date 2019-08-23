@@ -7,20 +7,8 @@
     flex-direction: row;
     flex-wrap: wrap;
 }
-  
-.header-strip {
-    align-items: center;
-    background-color: $nw-primary-color;
-    color: white;
-    display: flex;
-    flex: 1 0 100%;
-    font-family: $nw-ffamily-desc;
-    justify-content: flex-left;
-    margin: auto;
-    min-height: 2.5em;
-}
 
-.instructions {
+.countries-instructions {
     align-items: center;
     background-color: white;
     color: black;

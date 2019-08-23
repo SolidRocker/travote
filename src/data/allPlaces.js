@@ -14,6 +14,7 @@ export const data = [
 		"website": "https://www.lamskitchen.com/",
 		"email": "admin@lamskitchen.com",
 		"zone": "North-East",
+		"img": "https://lh3.googleusercontent.com/P2gjm0ljFhtuKdN21syBGn4At9fLyqlaEXX3aWTTopw1MbCqXLG4ElufIyq1ECu9pw",
 		"ext_1": "https://sethlui.com/lams-kitchen-salted-baked-chicken-abalone-soup-race-course-road-singapore/",
 	},
 	{
@@ -31,6 +32,7 @@ export const data = [
 		"website": "-",
 		"email": "-",
 		"zone": "North-East",
+		"img": "https://lh3.googleusercontent.com/P2gjm0ljFhtuKdN21syBGn4At9fLyqlaEXX3aWTTopw1MbCqXLG4ElufIyq1ECu9pw",
 		"ext_1": "-",
 		"ext_2": "-",
 	},
@@ -49,6 +51,7 @@ export const data = [
 		"website": "http://www.timhowan.com/",
 		"email": "customercare@timhowan.com",
 		"zone": "North-East",
+		"img": "https://lh3.googleusercontent.com/P2gjm0ljFhtuKdN21syBGn4At9fLyqlaEXX3aWTTopw1MbCqXLG4ElufIyq1ECu9pw",
 	},
 	{
 		"id": "4",
@@ -63,6 +66,7 @@ export const data = [
 		"contact": "6398 0773",
 		"hours": "11am - 9pm",
 		"zone": "North-East",
+		"img": "https://lh3.googleusercontent.com/P2gjm0ljFhtuKdN21syBGn4At9fLyqlaEXX3aWTTopw1MbCqXLG4ElufIyq1ECu9pw",
 		"ext_1": "https://www.misstamchiak.com/happy-chef-western-food/",
 		"ext_2": "https://sethlui.com/happy-chef-western-food-singapore/",
 	},
@@ -80,5 +84,6 @@ export const data = [
 		"hours": "9am - 10pm",
 		"website": "http://www.cshhcoffee.com/",
 		"zone": "North-East",
+		"img": "https://lh3.googleusercontent.com/P2gjm0ljFhtuKdN21syBGn4At9fLyqlaEXX3aWTTopw1MbCqXLG4ElufIyq1ECu9pw",
 	},
 ]

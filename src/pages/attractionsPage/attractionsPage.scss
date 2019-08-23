@@ -2,25 +2,16 @@
 
 .attractions-container {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
 }
 
-.attractions-info {  
-    align-content: flex-start;
+.attractions-maps {  
     background-color: white;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex: 1;
 }
-  
-.attractions-map {
-    align-items: center;
-    background-color: $nw-primary-color;
-    color: white;
-    display: flex;
-    flex: 1 0 100%;
-    font-family: $nw-ffamily-desc;
-    justify-content: flex-left;
-    margin: auto;
-    min-height: 2.5em;
+
+.attractions-topten {
+    background-color: black;
+    flex: 1;
+
 }

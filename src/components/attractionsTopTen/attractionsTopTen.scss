@@ -1,0 +1,11 @@
+@import '../../utils/mainStyle.scss';
+
+.topten-section {
+    align-content: flex-start;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 20vw;
+    float: right;
+    position: relative;
+}
