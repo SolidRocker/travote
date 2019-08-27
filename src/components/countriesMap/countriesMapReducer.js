@@ -26,6 +26,6 @@ export default function(state = countriesMapState, action) {
                 currCountry: action.payload,
             }
         default:
-            return countriesMapState;
+            return state;
     }
 }

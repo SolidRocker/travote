@@ -1,0 +1,40 @@
+@import '../../utils/mainStyle.scss';
+
+.aCard-section {
+    border-radius: $nw-border-radius;
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
+    width: 100%;
+}
+
+.aCard-section:hover {
+    background-color: #DDD;
+}
+.aCard-top {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0vh 0.5vw 0.8vh 0.5vw;
+}
+
+.aCard-icon {
+    align-content: flex-start;
+    align-items: flex-start;
+    border-style: solid;
+    border-radius: $nw-border-radius;
+    border-width: 2px;
+    border-color: #444;
+    margin-right: 0.7vw;
+}
+
+.aCard-upvotes {
+    border-radius: $nw-border-radius;
+    padding: 0.5vh 0.5vw 0.5vh 0.5vw;
+    margin-right: 0.25vw;
+}
+
+.aCard-downvotes {
+    border-radius: $nw-border-radius;
+    padding: 0.5vh 0.5vw 0.5vh 0.5vw;
+    margin-left: 0.25vw;
+}

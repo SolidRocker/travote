@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import {Map, GoogleApiWrapper, Marker} from 'google-maps-react';
 import {fetchPlaces, updateSelectedPlace} from './attractionsMapAction';
+import AttractionsInfo from '../attractionsInfo/attractionsInfo';
+import AttractionsTopTen from '../attractionsTopTen/attractionsTopTen';
 
 const mapStylesPC = {
-    width: '80%',
-    height: '100%'
 };
 
 export class AttractionsMap extends Component {
@@ -78,6 +78,9 @@ export class AttractionsMap extends Component {
                     }}
                 >
                 {this.props.places.map(place => this.renderMarkers(place))}
+
+                <AttractionsInfo/>
+                <AttractionsTopTen/>
 
                 </Map>
             </div>

@@ -2,9 +2,12 @@
 
 .info-section, .info-section-sp{
     align-content: flex-start;
+    background-color: #fff;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    height: 100%;
+    position: fixed;
     width: 20vw;
 }
 
@@ -114,7 +117,7 @@
 
 .info-section-hr {
     color:#9b9b9b;
-    padding-right: 1.5vw;
+    padding-right: 0.5vw;
 }
 
 a {

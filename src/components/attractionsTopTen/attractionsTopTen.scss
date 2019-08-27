@@ -1,11 +1,39 @@
 @import '../../utils/mainStyle.scss';
 
 .topten-section {
-    align-content: flex-start;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 20vw;
+    background-color: white;
+    border-radius: 50px 50px 5px 5px;
     float: right;
+    margin: 2% 4% 0% 0%; 
     position: relative;
+    width: 15vw;
+    height: 48vh;
+}
+
+.topten-header {
+    background-color: $nw-primary-color;
+    border-radius: 50px 50px 0px 0px;
+    padding-top: 2vh;
+}
+
+.topten-title, .topten-title-country {
+    flex: 1 0 100%;
+    margin: auto;
+    text-align: center;
+}
+
+.topten-title-country {
+    color: white;
+    font-weight: bold;
+    font-size: 1.5em;
+    padding-bottom: 1vh;
+}
+
+.topten-list {
+    padding: 1vh;
+
+}
+
+.topten-hr {
+    color: red;
 }
