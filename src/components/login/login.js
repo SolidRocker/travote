@@ -12,6 +12,8 @@ class Login extends Component {
             accessToken: null,
             id: null,
             email: null,
+            expiryTime: null,
+            expiresIn: null,
         },
     };
 
@@ -24,6 +26,8 @@ class Login extends Component {
                 accessToken: response.accessToken,
                 id: response.id,
                 email: response.email,
+                expiryTime: response.data_access_expiration_time,
+                expiresIn: response.expiresIn,
             }
         });
     }
