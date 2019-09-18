@@ -1,12 +1,16 @@
 import {
     FETCH_PLACES,
-    UPDATE_SELECTED_PLACE
+    UPDATE_SELECTED_PLACE,
+    UPDATE_USER_LOCATION
  } from '../../redux/types';
     
 const dataState = {
     places: [],
     selectedPlace: {},
-    hasSelection: false
+    hasSelection: false,
+
+    userLat: 0.0,
+    userLong: 0.0
 }
 
 export default function(state = dataState, action) {
@@ -21,6 +25,12 @@ export default function(state = dataState, action) {
                 ...state,
                 selectedPlace: action.payload,
                 hasSelection: action.hasPayload
+            }
+        case UPDATE_USER_LOCATION:
+            return {
+                ...state,
+                userLat: action.payload_lat,
+                userLong: action.payload_long
             }
         default:
             return state;

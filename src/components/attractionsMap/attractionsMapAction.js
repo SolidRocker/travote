@@ -1,6 +1,7 @@
 import {
     FETCH_PLACES,
-    UPDATE_SELECTED_PLACE
+    UPDATE_SELECTED_PLACE,
+    UPDATE_USER_LOCATION
 } from '../../redux/types';
 
 import {data} from '../../data/allPlaces';
@@ -41,5 +42,14 @@ export const updateSelectedPlace = (selectedPlace, hasSelection = true) => dispa
         type: UPDATE_SELECTED_PLACE,
         payload: selectedPlace,
         hasPayload: hasSelection
+    })
+}
+
+export const updateUserLocation = (lat, long) => dispatch => {
+
+    dispatch({
+        type: UPDATE_USER_LOCATION,
+        payload_lat: lat,
+        payload_long: long
     })
 }

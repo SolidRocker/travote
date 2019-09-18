@@ -104,23 +104,30 @@ input {
     padding-bottom: 5px;
 }
 
-.login-button-sign-up {
-    background-color: rgb(25, 190, 127);
+.login-button-facebook, .login-button-sign-up {
     border-radius: 4px;
     color: #eee;
     font-weight: bold;
     margin: 0 auto 15px auto;
     text-transform: uppercase;
     text-align: center;
-    padding: 0.5rem;
-    width: 40%;
+    width: 78%;
+}
+
+.login-button-sign-up {
+    background-color: rgb(25, 190, 127);
+    padding: 0.5rem 0rem;
 }
 
 .login-button-sign-up.hover {
     background-color: #197071;
 }
 
-.login-facebook {
-    text-align: center;
-    padding: 0.5rem;
+.login-button-sign-up-text {
+    color: #eee;
+    text-decoration: none;
+}
+
+.login-button-facebook {
+    background-color: #4b6cb3;
 }

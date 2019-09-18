@@ -54,14 +54,16 @@ class Login extends Component {
                     </form>
                 </div>
                 <div className="login-middle-text-or">or</div>
-                <Link to="/mapoverview" style={{textDecoration: 'none'}}> <div className="login-button-sign-up">Sign Up</div> </Link>
+                <div className="login-button-sign-up"> <Link className="login-button-sign-up-text" to="/mapoverview"> Sign Up </Link> </div>
 
-                <div className="login-facebook">
+                <div className="login-button-facebook">
                     <FacebookLoginWithButton 
                         appId="2425657641056947" 
-                        autoLoad 
+                        autoLoad={false}
                         fields="name,email,picture" 
                         callback={this.responseFacebook} 
+                        textButton=" Continue with Facebook"
+                        size="small"
                         icon="fa-facebook"/>
                 </div>
             </div>

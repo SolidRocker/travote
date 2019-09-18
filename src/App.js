@@ -13,7 +13,7 @@ class App extends Component {
       <Provider store={store}>
         <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Switch>
-            <Route path="/" exact component={LoginPage}/>
+            <Route path="/" exact component={AttractionsPage}/>
             <Route path="/login" component={LoginPage}/>
             <Route path="/mapoverview" component={MapOverviewPage}/>
             <Route path="/attractions" component={AttractionsPage}/>

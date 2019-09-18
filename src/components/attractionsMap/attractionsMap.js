@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import {Map, GoogleApiWrapper, Marker} from 'google-maps-react';
+
 import {fetchPlaces, updateSelectedPlace} from './attractionsMapAction';
 import AttractionsInfo from '../attractionsInfo/attractionsInfo';
 import AttractionsTopTen from '../attractionsTopTen/attractionsTopTen';
@@ -65,7 +66,19 @@ export class AttractionsMap extends Component {
         )
     }
 
+    renderUserLocation() {
+        return (
+            <Marker
+                key={0}
+                title={"My location"}
+                name={"My location"}
+                position={{lat: this.props.userLat, lng: this.props.userLong}}
+            />
+        )
+    }
+
     render() {
+
         return (
             <div className="map-section">
                 <Map
@@ -78,6 +91,7 @@ export class AttractionsMap extends Component {
                     }}
                 >
                 {this.props.places.map(place => this.renderMarkers(place))}
+                {this.renderUserLocation()}
 
                 <AttractionsInfo/>
                 <AttractionsTopTen/>
@@ -90,6 +104,9 @@ export class AttractionsMap extends Component {
 
 const mapStateToProps = state => ({
     places: state.attractions.places,
+    userLat: state.attractions.userLat,
+    userLong: state.attractions.userLong,
+
     /*selectedPlace: state.mapContainer.selectedPlace,
 
     masterCategoryList: state.filterSection.masterCategoryList,
