@@ -45,11 +45,12 @@ export const updateSelectedPlace = (selectedPlace, hasSelection = true) => dispa
     })
 }
 
-export const updateUserLocation = (lat, long) => dispatch => {
+export const updateUserLocation = (lat, long, isLocEnabled) => dispatch => {
 
     dispatch({
         type: UPDATE_USER_LOCATION,
         payload_lat: lat,
-        payload_long: long
+        payload_long: long,
+        payload_locEnabled: isLocEnabled
     })
 }

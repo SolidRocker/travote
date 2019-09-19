@@ -16,21 +16,22 @@ export class AttractionsMap extends Component {
         this.state = {
             latitude: 1.319190,
             longitude: 103.857834,
-            distance: 3
+            distance: 3,
         }
     }
 
     componentDidMount() {
-        this.props.fetchPlaces(this.state.latitude, this.state.longitude, this.state.distance);
+        if(this.props.userLocEnabled) {
+            this.props.fetchPlaces(this.props.userLat, this.props.userLong, this.state.distance);
+        }
+        else {
+            this.props.fetchPlaces(this.state.latitude, this.state.longitude, this.state.distance);
+        }
     }
 
     onMarkerClick = (props, marker, e) => {
         //console.log(props.placeData);
         this.props.updateSelectedPlace(props.placeData);
-    }
-
-    isMobile() {
-        //return (window.innerHeight / window.innerWidth) > 1.6;
     }
 
     renderMarkers(place) {
@@ -67,17 +68,34 @@ export class AttractionsMap extends Component {
     }
 
     renderUserLocation() {
+        if(!this.props.userLocEnabled) {
+            return null;
+        }
+        
         return (
             <Marker
                 key={0}
                 title={"My location"}
                 name={"My location"}
                 position={{lat: this.props.userLat, lng: this.props.userLong}}
+                icon={{
+                    url: "http://maps.google.com/mapfiles/ms/icons/blue.png",
+                    anchor: new this.props.google.maps.Point(32, 32),
+                    //scaledSize: new this.props.google.maps.Size(64,64)
+                  }}
             />
         )
     }
 
     render() {
+
+        var cLat = this.state.latitude;
+        var cLong = this.state.longitude;
+        
+        if(this.props.userLocEnabled) {
+            cLat = this.props.userLat;
+            cLong = this.props.userLong;
+        }
 
         return (
             <div className="map-section">
@@ -85,9 +103,9 @@ export class AttractionsMap extends Component {
                     google={this.props.google}
                     zoom={14}
                     style={mapStylesPC}
-                    initialCenter={{
-                        lat: this.state.latitude,
-                        lng: this.state.longitude
+                    center={{
+                        lat: cLat,
+                        lng: cLong
                     }}
                 >
                 {this.props.places.map(place => this.renderMarkers(place))}
@@ -106,16 +124,7 @@ const mapStateToProps = state => ({
     places: state.attractions.places,
     userLat: state.attractions.userLat,
     userLong: state.attractions.userLong,
-
-    /*selectedPlace: state.mapContainer.selectedPlace,
-
-    masterCategoryList: state.filterSection.masterCategoryList,
-    categoryList: state.filterSection.categoryList,
-    zoneList: state.filterSection.zoneList,
-
-    hasFilterData: state.filterSection.hasFilterData,
-    filterType: state.filterSection.filterType,
-    filterData: state.filterSection.filterData*/
+    userLocEnabled: state.attractions.userLocEnabled
 });
 
 export default connect(mapStateToProps, {fetchPlaces, updateSelectedPlace})(GoogleApiWrapper({

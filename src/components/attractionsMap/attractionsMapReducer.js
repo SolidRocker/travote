@@ -10,7 +10,8 @@ const dataState = {
     hasSelection: false,
 
     userLat: 0.0,
-    userLong: 0.0
+    userLong: 0.0,
+    userLocEnabled: false
 }
 
 export default function(state = dataState, action) {
@@ -30,7 +31,8 @@ export default function(state = dataState, action) {
             return {
                 ...state,
                 userLat: action.payload_lat,
-                userLong: action.payload_long
+                userLong: action.payload_long,
+                userLocEnabled: action.payload_locEnabled
             }
         default:
             return state;
