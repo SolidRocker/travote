@@ -9,9 +9,10 @@ const dataState = {
     selectedPlace: {},
     hasSelection: false,
 
+    userAbbr: 'NIL',
     userLat: 0.0,
     userLong: 0.0,
-    userLocEnabled: false
+    userLocEnabled: false,
 }
 
 export default function(state = dataState, action) {
@@ -30,9 +31,10 @@ export default function(state = dataState, action) {
         case UPDATE_USER_LOCATION:
             return {
                 ...state,
+                userAbbr: action.payload_abbr,
                 userLat: action.payload_lat,
                 userLong: action.payload_long,
-                userLocEnabled: action.payload_locEnabled
+                userLocEnabled: action.payload_locEnabled,
             }
         default:
             return state;
