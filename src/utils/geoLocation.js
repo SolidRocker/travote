@@ -19,19 +19,14 @@ class GeoLocationClass extends React.Component {
         if(this.props.coords) {
             this.props.updateUserLocation(this.props.coords.latitude, this.props.coords.longitude, this.IsLocationEnabled());
         }
+        else {
+            this.props.updateUserLocation(0, 0, false);
+        }
         return null;
     }
 
     IsLocationEnabled() {
         return this.props.isGeolocationAvailable && this.props.isGeolocationEnabled;
-    }
-
-    GetLat() {
-        return this.props.coords.latitude;
-    }
-
-    GetLong() {
-        return this.props.coords.longitude;
     }
 }
 

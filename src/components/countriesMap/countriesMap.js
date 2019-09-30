@@ -4,7 +4,7 @@ import { Redirect } from 'react-router-dom';
 
 import { ComposableMap, ZoomableGroup, Geographies, Geography, Markers, Marker } from 'react-simple-maps';
 import ReactTooltip from 'react-tooltip';
-import {initCountries, chooseCountries} from './countriesMapAction';
+import {chooseCountries} from './countriesMapAction';
 import './countriesMap.scss';
   
 export class CountriesMap extends Component {
@@ -19,8 +19,6 @@ export class CountriesMap extends Component {
     }
 
     componentDidMount() {
-
-        this.props.initCountries();
 
         if(window.location.hostname === "localhost") {
             this.setState({mapPath: "/allcountries50.json"})
@@ -191,4 +189,4 @@ const mapStateToProps = state => ({
 
 });
 
-export default connect(mapStateToProps, {initCountries, chooseCountries})(CountriesMap);
+export default connect(mapStateToProps, {chooseCountries})(CountriesMap);

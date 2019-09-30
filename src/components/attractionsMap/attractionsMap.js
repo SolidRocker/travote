@@ -21,8 +21,7 @@ export class AttractionsMap extends Component {
 
     componentWillReceiveProps(nextProps) {
         if(!this.state.isInit && nextProps.userLat !== 0) {
-            var cAbbr = nextProps.userAbbr ? nextProps.userAbbr : 'NIL';
-            this.props.fetchPlaces(cAbbr, nextProps.userLat, nextProps.userLong, this.state.distance);
+            this.props.fetchPlaces(nextProps.userAbbr, nextProps.userLat, nextProps.userLong, this.state.distance);
             this.setState({isInit: true});
         }
     }

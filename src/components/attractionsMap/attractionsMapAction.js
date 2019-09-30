@@ -5,6 +5,7 @@ import {
 } from '../../redux/types';
 
 import axios from 'axios';
+import {toCountryABBR} from '../../utils/utils';
 
 export const fetchPlaces = (abbr_, latitude_, longitude_, distance_, limit_ = 1000) => dispatch => {
 
@@ -14,7 +15,7 @@ export const fetchPlaces = (abbr_, latitude_, longitude_, distance_, limit_ = 10
     var longDistance = Math.cos(longitude_) * 111.32;  // The value is length per degree at the equator.
 
     // Get the places
-    axios.get('https://5gfdlfwnjh.execute-api.ap-southeast-1.amazonaws.com/dev/places?abbr=' + 'SGP' + '&long=' + longitude_ + '&lat=' + latitude_ + '&distance=' + distConverted + '&limit=' + limit_)
+    axios.get('https://5gfdlfwnjh.execute-api.ap-southeast-1.amazonaws.com/dev/places?abbr=' + abbr_ + '&long=' + longitude_ + '&lat=' + latitude_ + '&distance=' + distConverted + '&limit=' + limit_)
     .then(res => {
         dispatch({
             type: FETCH_PLACES,
@@ -37,6 +38,7 @@ export const updateUserLocation = (lat_, long_, isLocEnabled) => dispatch => {
 
     var finalLat = lat_;
     var finalLong = long_;
+    var finalAbbr = '';
     
     // Tracks user location via IP
     axios.get('https://ipapi.co/json/').then((response) => {
@@ -44,17 +46,34 @@ export const updateUserLocation = (lat_, long_, isLocEnabled) => dispatch => {
         
         if(!isLocEnabled) {
             finalLat = data.latitude;
-            finalLong = data.longitude;
+            finalLong = data.longitude;  
         }
 
-    }).catch((error) => {
-        console.log(error);
-    }).then(() => {
+        axios.get('https://maps.googleapis.com/maps/api/geocode/json?latlng=' + finalLat + ',' + finalLong + '&key=' + 'AIzaSyBNoS6JelKyYuk7R1iEyfKJ_h61YSIfjGs').then((response) => {
+            
+            let data = response.data.results[0].address_components;
+
+            var foundCountry = false;
+            for(var i = 0; i < data.length; ++i) {
+                for(var j = 0; j < data[i].types.length; ++j) {
+                    if(data[i].types[j] === 'country') {
+                        foundCountry = true;
+                        finalAbbr = toCountryABBR(data[i].long_name);
+                        break;
+                    }
+                }
+
+                if(foundCountry) {
+                    break;
+                }
+            }
+        }).then(() => {
         dispatch({
             type: UPDATE_USER_LOCATION,
+            payload_abbr: finalAbbr,
             payload_lat: finalLat,
             payload_long: finalLong,
             payload_locEnabled: isLocEnabled
         })
-    })
+    })})
 }
