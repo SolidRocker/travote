@@ -6,9 +6,9 @@ View the web app here: https://solidrocker.github.io/travote/
 ## Project Overview
 
 There are 3 screens so far:
-1. Login page. Just click [Sign up] to go in.
-2. Choose country. Doesn't work for now, will always go to Singapore. Need data from diff countries to continue this.
-3. Choose places. I have 5 places for now. Click on them for the places' info.
+1. Login page: Just click [Sign up] to go in.
+2. Choose country: Doesn't work for now, will always go to Singapore. Need data from different countries to continue this.
+3. Choose places: I have 5 places for now. Click on them for the places' info.
 
 ## To Do
 
@@ -43,7 +43,7 @@ There are 3 screens so far:
 - Going back shows only a white screen, because it does not fire anything when it goes back to the previous screen.
 - Need to research on how to force it to reload.
 
-### Tai Keong
+### Tyler
 
 - The CSS is in a mess because it involved a lot of copy/paste. Will clean it up.
 - Zoom the map to a different place depending on country.
