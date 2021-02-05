@@ -1,6 +1,7 @@
 [WORK IN PROGRESS]
 
 View the web app here: https://solidrocker.github.io/travote/
+
 (Login in feature unavailable. Click [Sign Up] to gain access to the website)
 
 ## Project Overview
